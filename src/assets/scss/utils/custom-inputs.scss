@@ -1,0 +1,36 @@
+.inp {
+  border: 1px solid #5F6269;
+  border-radius: 8px 0 0 8px;
+  padding: 0 20px;
+  height: 45px;
+  border-right: none;
+  min-width: 300px;
+  width: 100%;
+}
+.inp.error {
+  border: 1px solid $danger-color;
+  &::placeholder {
+    color: $danger-color
+  }
+}
+.input {
+  padding: 10px;
+  border: 1px solid #C0BFBF;
+  border-radius: 3px;
+  transition: 0.3s;
+  font-size: 14px;
+  width: 100%;
+  &:hover {
+    border: 1px solid gray;
+  }
+  &::placeholder {
+    color: gray;
+  }
+  &:focus {
+    border: 1px solid #68AEFF;
+  }
+  &:disabled {
+    background: #F9F9F9;
+    border: 1px solid #CCCCCC;
+  }
+}
