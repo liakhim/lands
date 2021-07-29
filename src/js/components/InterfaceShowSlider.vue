@@ -2,7 +2,7 @@
   <div>
     <div class="container" style="max-width: 900px">
       <div class="title">
-        <h2>Automations take a load of work
+        <h2><span style="color: #FF4D4D">Automations</span> take a load of work
           off your shoulders</h2>
         <p>LeadEnforce will keep an eye on your ads performance so that you don't miss on important performance changes 24/7</p>
       </div>
@@ -24,7 +24,7 @@
         <template slot="nextButton"><i class="fas fa-chevron-right"></i></template>
       </agile>
     </div>
-    <div style="max-width: 1600px; margin: auto">
+    <div class="container-fl">
       <agile class="main" ref="main" :options="options1" :as-nav-for="asNavFor1">
         <div class="slide"
              v-for="(slide, index) in slides"
@@ -42,7 +42,7 @@
         asNavFor1: [],
         asNavFor2: [],
         options1: {
-          dots: false,
+          dots: true,
           fade: true,
           navButtons: false,
           autoplay: false
@@ -100,3 +100,42 @@
     }
   }
 </script>
+<style lang="scss" scoped>
+  .container {
+    padding: 80px 0 0 0;
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        text-align: center;
+        font-size: 2.1em;
+        max-width: 700px;
+      }
+      p {
+        text-align: center;
+        max-width: 700px;
+        padding: 30px 0 0 0;
+      }
+    }
+  }
+  .main {
+    ::v-deep.agile__dots {
+      margin: 30px 0;
+      .agile__dot {
+        button {
+          background: #FAFAFA;
+          box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+          width: 14px;
+          height: 14px;
+        }
+      }
+      .agile__dot--current {
+        button {
+          background: #FF4D4D;
+          box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+</style>

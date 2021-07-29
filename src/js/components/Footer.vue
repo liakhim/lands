@@ -39,7 +39,7 @@
           <ul>
             <li><a href="#">sales@leadenforce.com</a></li>
             <li><a href="#">support@leadenforce.com</a></li>
-            <li>
+            <li class="icons">
               <a href="#">
                 <img src="assets/img/social-icons/linkedin.svg" alt="">
               </a>
@@ -52,7 +52,7 @@
       </div>
       <div class="footer-copyright">
         <div class="logo">
-          <img src="assets/img/le-logo.svg" alt="">
+          <img src="assets/img/le-logo-monochrome.svg" alt="">
         </div>
         <div class="links">
           <ul>
@@ -80,6 +80,23 @@
       align-items: start;
       justify-content: space-between;
       padding: 100px 0 50px 0;
+      .keep {
+        ul {
+          li {
+            a {
+              color: #2861B2
+            }
+          }
+          .icons {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            a {
+              max-width: 50px;
+            }
+          }
+        }
+      }
       h5 {
         color: #575757;
         padding-bottom: 15px;
@@ -93,7 +110,7 @@
             width: 100%;
             padding: 10px 0;
             color: #8D8D8D;
-            font-size: 0.95em
+            font-size: 0.9em
           }
         }
       }

@@ -39,7 +39,7 @@ export default {
       .arrow {
         position: absolute;
         right: 100%;
-        top: 10px;
+        top: 15px;
         width: 20px;
       }
       label {
@@ -47,9 +47,9 @@ export default {
         width: 100%;
       }
       .comment {
-        font-size: 0.8em;
-        padding: 0.5em 0 0 1em;
+        padding: 0.5em 0 0 0.5em;
         width: 100%;
+        font-size: 0.9em;
         span {
           color: $danger-color;
         }

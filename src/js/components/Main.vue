@@ -5,51 +5,69 @@
     <LoginModal/>
     <ForgotPassword/>
     <!----content---->
-    <Header :scroll-header="windowTop > 50"/>
-    <Kpi/>
+    <Header :scroll-header="windowTop > 0"/>
+    <MainScreen :style="{'margin-top': windowTop > 0 ? '100px' : '0'}"/>
+    <Features/>
     <QuickStart/>
     <Functions/>
     <Ads/>
-    <FormTrial/>
-    <InterfaceShowSlider/>
+    <Kpi/>
     <FeedbackSlider/>
+    <FormTrial/>
+<!--    <InterfaceShowSlider/>-->
+<!--    <CallToAction/>-->
+<!--    <DragDropEditor/>-->
+<!--    <Infographics/>-->
     <Footer/>
   </div>
 </template>
 <script>
-  import RegistrationModal from './RegistrationModal.vue'
-  import LoginModal from './LoginModal.vue'
-  import ForgotPassword from './ForgotPasswordModal.vue'
-  import Header from './Header.vue'
-  import QuickStart from './QuickStart.vue'
-  import Functions from './Functions.vue'
-  import Kpi from './Kpi.vue'
-  import Ads from './Ads.vue'
-  import FormTrial from './FormTrial.vue'
-  import InterfaceShowSlider from './InterfaceShowSlider.vue'
-  import FeedbackSlider from './FeedbackSlider.vue'
-  import Footer from './Footer.vue'
-  export default {
-    data () {
-      return {
-        windowTop: 0
-      }
-    },
-    components: {
-      RegistrationModal, LoginModal, ForgotPassword, Header, Functions, Ads, FormTrial, Kpi, QuickStart, InterfaceShowSlider, FeedbackSlider, Footer
-    },
-    mounted() {
-      window.addEventListener("scroll", this.onScroll)
-    },
-    beforeDestroy() {
-      window.removeEventListener("scroll", this.onScroll)
-    },
-    methods: {
-      onScroll(e) {
-        this.windowTop = window.top.scrollY /* or: e.target.documentElement.scrollTop */
-      }
+import RegistrationModal from './RegistrationModal.vue'
+import LoginModal from './LoginModal.vue'
+import ForgotPassword from './ForgotPasswordModal.vue'
+import Header from './Header.vue'
+import Features from './Features.vue'
+import MainScreen from './MainScreen.vue'
+import QuickStart from './QuickStart.vue'
+import Functions from './Functions.vue'
+import Kpi from './Kpi.vue'
+import Ads from './Ads.vue'
+import FormTrial from './FormTrial.vue'
+import FeedbackSlider from './FeedbackSlider.vue'
+import Footer from './Footer.vue'
+export default {
+  data () {
+    return {
+      windowTop: 0
+    }
+  },
+  components: {
+    RegistrationModal,
+    LoginModal,
+    ForgotPassword,
+    Header,
+    Features,
+    MainScreen,
+    Functions,
+    Ads,
+    FormTrial,
+    Kpi,
+    QuickStart,
+    FeedbackSlider,
+    Footer
+  },
+  mounted() {
+     window.addEventListener("scroll", this.onScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.onScroll)
+  },
+  methods: {
+    onScroll(e) {
+      this.windowTop = window.top.scrollY /* or: e.target.documentElement.scrollTop */
     }
   }
+}
 </script>
 <style lang="scss">
   .main {
@@ -67,7 +85,6 @@
     border: none;
     color: #ccc;
     cursor: pointer;
-    font-size: 24px;
     transition-duration: 0.3s;
   }
   .thumbnails .slide {
@@ -116,67 +133,7 @@
     right: -45px;
   }
   /***********************/
-  .main-feedback {
-    .slide {
-      .slide-body {
-        margin: 5px 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: start;
-        padding: 50px;
-        background: #FAFAFA;
-        border-radius: 12px;
-        overflow: hidden;
-        .avatar {
-          overflow: hidden;
-          border-radius: 50%;
-          height: 100px;
-          margin: 50px 0 0 0;
-        }
-        .name {
-          width: 100%;
-          height: 100px;
-        }
-        .feedback_text {
-          width: 100%;
-          padding: 15px 0 0 0;
-          height: 160px;
-        }
-      }
-    }
-  }
-  .main-feedback .agile__nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #FFFFFF;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-  }
-  .main-feedback .agile__nav-button--prev {
-    left: -45px;
-  }
-  .main-feedback .agile__nav-button--next {
-    right: -45px;
-  }
-  .main-feedback .agile__dots {
-    margin: 20px auto;
-    .agile__dot {
-      button {
-        background: #FAFAFA;
-        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-      }
-    }
-    .agile__dot--current {
-      button {
-        background: #FF4D4D;
-        box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.1);
-      }
-    }
-  }
+
   /***********************/
   .agile__nav-button:hover {
     color: #888;

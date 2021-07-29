@@ -1,5 +1,5 @@
 <template>
-  <section class="quick-start">
+  <section class="quick-start container-fl">
     <div class="wrapper-container">
       <div class="container">
         <div class="image">
@@ -20,7 +20,6 @@
   .quick-start {
     .wrapper-container {
       background: #FAFAFA;
-      max-width: 1600px;
       margin: auto;
       border-radius: 12px;
       padding: 50px;

@@ -1,6 +1,6 @@
 <template>
   <header class="header" :class="{'scroll-header': scrollHeader}">
-    <div class="container">
+    <div class="container-fl">
       <div class="logo">
         <a href="/">
           <img src="assets/img/le-logo.svg" alt="">
@@ -53,7 +53,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .container {
+    .container-fl {
       display: flex;
       align-items: center;
       .logo {

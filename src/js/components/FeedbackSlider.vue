@@ -1,5 +1,8 @@
 <template>
-  <div class=container :as-nav-for="asNavFor">
+  <div class="container" :as-nav-for="asNavFor">
+    <div class="title">
+      <h2>What our users say about us</h2>
+    </div>
     <agile class="main-feedback" :options="options">
       <div class="slide" style="width: 100%;"
            v-for="(slide, index) in feedbackSlides"
@@ -85,7 +88,88 @@
     },
     methods: {},
     mounted () {
-      this.asNavFor2.push(this.$refs.main-feedback)
+      this.asNavFor2.push(this.$refs.mainFeedback)
     }
   }
 </script>
+<style lang="scss" scoped>
+  .container {
+    padding: 80px 0 0 0;
+    .title {
+      padding: 0 0 60px 0;
+      h2 {
+        font-size: 2.1em;
+        text-align: center;
+      }
+    }
+  }
+  .main-feedback {
+    .slide {
+      .slide-body {
+        margin: 5px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding: 2.5em;
+        background: #FAFAFA;
+        border-radius: 12px;
+        overflow: hidden;
+        .avatar {
+          overflow: hidden;
+          border-radius: 50%;
+          height: 100px;
+          margin: 50px 0 0 0;
+        }
+        .name {
+          width: 100%;
+          height: 100px;
+        }
+        .feedback_text {
+          width: 100%;
+          padding: 15px 0 0 0;
+          height: 160px;
+        }
+      }
+    }
+  }
+  .main-feedback .agile__nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #FFFFFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+  }
+  .main-feedback .agile__nav-button--prev {
+    left: -45px;
+  }
+  .main-feedback .agile__nav-button--next {
+    right: -45px;
+  }
+  ::v-deep.main-feedback .agile__dots {
+    margin: 30px auto;
+    .agile__dot {
+      button {
+        background: #FAFAFA;
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        width: 14px;
+        height: 14px;
+      }
+    }
+    .agile__dot--current {
+      button {
+        background: #FF4D4D;
+        box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+  @media (max-width: 1300px) {
+    .main-feedback {
+      max-width: 1100px;
+      margin: auto;
+    }
+  }
+</style>

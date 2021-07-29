@@ -1,5 +1,5 @@
 <template>
-  <label>
+  <label class="base-input">
     <span v-if="!!title" class="d-flex align-items-center label-title">{{title}}</span>
     <label style="position: relative">
       <input :name="name"
@@ -112,6 +112,11 @@
   }
 </script>
 <style scoped lang="scss">
+  .base-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
   .icon {
     position: absolute;
     left: 10px;
@@ -134,9 +139,11 @@
       color: #000
     }
     .label-title {
-      font-weight: 600;
+      font-weight: 400;
       font-size: 0.9em;
-      height: 34px;
+      color: #888888;
+      padding: 0 0 10px 0;
+      display: block;
     }
     .error {
       display: block;

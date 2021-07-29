@@ -5,27 +5,27 @@
         <div class="text">
           <div class="title">
             <img src="assets/img/ads-icon.svg" alt="">
-            <h4>Create ads in bulk and keep the best-performing ones</h4>
+            <h2>Create ads in bulk and keep the best-performing ones</h2>
             <p>Use Bulk creation to upload headlines, copies and images in bulk and generate dozens of ad
               variations </p>
           </div>
           <div class="content">
             <div class="row">
-              <div class="col-6">
+              <div class="block">
                 <h5>A/B test everything</h5>
                 <p>Test and compare the performance of ads on different audiences</p>
               </div>
-              <div class="col-6">
+              <div class="block">
                 <h5>Save time creating ads</h5>
                 <p>Create up to 50 ad variations in a few minutes</p>
               </div>
             </div>
             <div class="row">
-              <div class="col-6">
+              <div class="block">
                 <h5>Tag everything</h5>
                 <p>Add UTM tags to your ads and control naming conditions</p>
               </div>
-              <div class="col-6">
+              <div class="block">
                 <h5>Control your progress</h5>
                 <p>Monitor your ad performance with a custom dashboard</p>
               </div>
@@ -43,7 +43,6 @@
   .ads {
     .wrapper-container {
       background: #FAFAFA;
-      max-width: 1600px;
       margin: auto;
       border-radius: 12px;
       padding: 50px;
@@ -66,6 +65,23 @@
           padding: 30px;
           h2 {
             padding: 30px 0;
+            font-size: 1.5em
+          }
+          .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .block {
+              padding: 30px 10px 30px 0;
+              h5 {
+                font-size: 1.2em;
+                padding: 10px 0;
+              }
+              p {
+                padding: 10px 0;
+                font-size: 0.9em;
+              }
+            }
           }
         }
       }

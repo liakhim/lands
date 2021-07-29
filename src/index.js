@@ -14,6 +14,7 @@ window.Vue = require('vue')
 
 // Vue components (for use in html)
 Vue.component('main-component', require('./js/components/Main.vue').default)
+Vue.component('main-second-component', require('./js/components/MainSecond.vue').default)
 
 // Vue init
 const app = new Vue({

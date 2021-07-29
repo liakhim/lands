@@ -11,11 +11,12 @@
     </div>
     <div class="modal-footer d-flex justify-content-between px-4 py-3">
       <slot name="footer"></slot>
+      <slot name="links"></slot>
     </div>
   </modal>
 </template>
 
-<script lang="ts">
+<script>
 
   export default {
     name: 'ModalCustom',
@@ -45,7 +46,7 @@
 </script>
 <style lang="scss">
   .vm--modal {
-    padding: 25px;
+    padding: 30px 50px;
     .modal-header {
       display: flex;
       align-items: center;
@@ -63,13 +64,24 @@
         cursor: pointer;
       }
     }
-    .modal-body {
-      padding: 40px 0 20px;
-    }
+    .modal-body {}
     .modal-footer {
       width: 100%;
       button {
         width: 100%;
+      }
+      .links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px 0 10px;
+        p {
+          cursor: pointer;
+          font-size: 0.8em;
+          span {
+            color: #2861B2;
+          }
+        }
       }
     }
   }
